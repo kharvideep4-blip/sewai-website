@@ -41,8 +41,8 @@ function Navbar() {
       <div className="grid grid-cols-3 items-center px-4 py-3">
         {/* Left column: hamburger (mobile) + empty placeholder (desktop) */}
         <div className="flex items-center">
-          <button 
-            onClick={toggleMenu} 
+          <button
+            onClick={toggleMenu}
             className="lg:hidden text-2xl text-amber-500 focus:outline-none"
           >
             <i className={`fas ${isOpen ? 'fa-times' : 'fa-bars'}`}></i>
@@ -53,10 +53,10 @@ function Navbar() {
         {/* Center column: brand (logo + text) – always centered */}
         <div className="flex justify-center">
           <Link to="/" className="flex items-center gap-3">
-            <img 
-              src="/assets/images/sewai-logo.png" 
-              alt="SEWAI Logo" 
-              className="h-16 w-auto" 
+            <img
+              src="/assets/images/sewai-logo.png"
+              alt="SEWAI Logo"
+              className="h-16 w-auto"
             />
             <div className="flex flex-col">
               <span className="font-playfair text-3xl font-bold text-amber-500">SEWAI</span>
@@ -82,23 +82,47 @@ function Navbar() {
           <NavLink to="/" className={({ isActive }) => `px-5 py-2 rounded ${isActive ? 'bg-white/20' : 'hover:bg-white/10'}`} end>Home</NavLink>
           <NavLink to="/about" className={({ isActive }) => `px-5 py-2 rounded ${isActive ? 'bg-white/20' : 'hover:bg-white/10'}`}>About Us</NavLink>
 
-          {/* Features Dropdown */}
+          {/* ===== Features Dropdown ===== */}
           <div className="relative group">
             <button onClick={toggleFeatures} className="flex items-center px-5 py-2 rounded hover:bg-white/10">
               Features <i className="fas fa-chevron-down ml-1 text-sm"></i>
             </button>
-            <div className={`lg:absolute lg:left-0 lg:mt-2 lg:w-80 bg-white text-gray-700 border border-gray-200 rounded-lg shadow-lg p-2 ${featuresOpen ? 'block' : 'hidden'} lg:group-hover:block`}>
-              <ul className="space-y-1">
-                {/* NEW: Capital at the start */}
-                <li><Link to="/features/capital" className="block px-3 py-2 hover:bg-amber-50 rounded font-semibold text-amber-600">Capital</Link></li>
 
-                {/* Temple Services – with sub-dropdown */}
-                <li className="relative group/sub">
-                  <button onClick={toggleServices} className="flex items-center justify-between w-full px-3 py-2 hover:bg-amber-50 rounded">
+            {/* Panel: click-controlled on mobile, hover-controlled (grid) on desktop */}
+            <div
+              className={`lg:fixed lg:left-1/2 lg:-translate-x-1/2 lg:top-[104px] lg:w-[900px] lg:max-w-[95vw] bg-white text-gray-700 border border-gray-200 rounded-lg shadow-xl p-4 z-40
+                ${featuresOpen ? 'block' : 'hidden'} lg:hidden lg:group-hover:grid`}
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-4 gap-1">
+                <Link to="/features/capital" className="px-3 py-2 hover:bg-amber-50 rounded font-semibold text-amber-600">Capital</Link>
+                <Link to="/features/setting-up" className="px-3 py-2 hover:bg-amber-50 rounded">Setting Up</Link>
+                <Link to="/features/devotee-connect" className="px-3 py-2 hover:bg-amber-50 rounded">Devotee Connect</Link>
+                <Link to="/features/payment-gateway" className="px-3 py-2 hover:bg-amber-50 rounded">Payment Gateway</Link>
+                <Link to="/features/temple-education" className="px-3 py-2 hover:bg-amber-50 rounded">Temple Education</Link>
+                <Link to="/features/temple-hiring" className="px-3 py-2 hover:bg-amber-50 rounded">Temple Hiring</Link>
+                <Link to="/features/hall-booking" className="px-3 py-2 hover:bg-amber-50 rounded">Hall Booking</Link>
+                <Link to="/features/temple-e-marketplace" className="px-3 py-2 hover:bg-amber-50 rounded">Temple E‑MarketPlace</Link>
+                <Link to="/features/inventory" className="px-3 py-2 hover:bg-amber-50 rounded">Inventory</Link>
+                <Link to="/features/ai-features" className="px-3 py-2 hover:bg-amber-50 rounded">AI Features</Link>
+                <Link to="/features/procedures" className="px-3 py-2 hover:bg-amber-50 rounded">Procedures</Link>
+                <Link to="/features/smart-donations" className="px-3 py-2 hover:bg-amber-50 rounded">Smart Donations</Link>
+                <Link to="/features/deva-program" className="px-3 py-2 hover:bg-amber-50 rounded">Deva Program</Link>
+                <Link to="/features/temple-merchandise" className="px-3 py-2 hover:bg-amber-50 rounded">Temple Merchandise</Link>
+
+                {/* Temple Services — hover flyout on desktop, click flyout on mobile */}
+                <div className="relative group/sub">
+                  <button
+                    onClick={toggleServices}
+                    className="flex items-center justify-between w-full px-3 py-2 hover:bg-amber-50 rounded text-left"
+                  >
                     Temple Services <i className="fas fa-chevron-right ml-2 text-xs"></i>
                   </button>
-                  <ul className={`lg:absolute lg:left-full lg:top-0 lg:ml-2 lg:w-[420px] bg-white border border-gray-200 rounded-lg shadow-lg p-3 ${servicesOpen ? 'block' : 'hidden'} lg:group-hover/sub:block max-h-96 overflow-y-auto`}>
-                    <li className="grid grid-cols-3 gap-1">
+
+                  <div
+                    className={`lg:absolute lg:left-0 lg:top-full lg:mt-1 lg:w-[420px] bg-white border border-gray-200 rounded-lg shadow-lg p-3 z-50 max-h-96 overflow-y-auto
+                      ${servicesOpen ? 'block' : 'hidden'} lg:hidden lg:group-hover/sub:block`}
+                  >
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-1">
                       <Link to="/features/temple-services/temple-maps" className="block px-3 py-1 hover:bg-amber-50 rounded text-sm">Temple Maps</Link>
                       <Link to="/features/temple-services/temple-tourism" className="block px-3 py-1 hover:bg-amber-50 rounded text-sm">Temple Tourism</Link>
                       <Link to="/features/temple-services/temple-time-schedule" className="block px-3 py-1 hover:bg-amber-50 rounded text-sm">Temple Time Schedule</Link>
@@ -108,30 +132,10 @@ function Navbar() {
                       <Link to="/features/temple-services/temple-true-noms" className="block px-3 py-1 hover:bg-amber-50 rounded text-sm">Temple True Noms</Link>
                       <Link to="/features/temple-services/temple-visitor-management" className="block px-3 py-1 hover:bg-amber-50 rounded text-sm">Temple Visitor Management</Link>
                       <Link to="/features/temple-services/prasad-automation" className="block px-3 py-1 hover:bg-amber-50 rounded text-sm">Prasad Automation</Link>
-                    </li>
-                  </ul>
-                </li>
-
-                {/* Main Features */}
-                <li><Link to="/features/setting-up" className="block px-3 py-2 hover:bg-amber-50 rounded">Setting Up</Link></li>
-                <li><Link to="/features/devotee-connect" className="block px-3 py-2 hover:bg-amber-50 rounded">Devotee Connect</Link></li>
-                <li><Link to="/features/payment-gateway" className="block px-3 py-2 hover:bg-amber-50 rounded">Payment Gateway</Link></li>
-
-                {/* NEW: Temple Education (replaces Temple Events) */}
-                <li><Link to="/features/temple-education" className="block px-3 py-2 hover:bg-amber-50 rounded">Temple Education</Link></li>
-
-                {/* NEW: Temple Hiring */}
-                <li><Link to="/features/temple-hiring" className="block px-3 py-2 hover:bg-amber-50 rounded">Temple Hiring</Link></li>
-
-                <li><Link to="/features/hall-booking" className="block px-3 py-2 hover:bg-amber-50 rounded">Hall Booking</Link></li>
-                <li><Link to="/features/temple-e-marketplace" className="block px-3 py-2 hover:bg-amber-50 rounded">Temple E‑MarketPlace</Link></li>
-                <li><Link to="/features/inventory" className="block px-3 py-2 hover:bg-amber-50 rounded">Inventory</Link></li>
-                <li><Link to="/features/ai-features" className="block px-3 py-2 hover:bg-amber-50 rounded">AI Features</Link></li>
-                <li><Link to="/features/procedures" className="block px-3 py-2 hover:bg-amber-50 rounded">Procedures</Link></li>
-                <li><Link to="/features/smart-donations" className="block px-3 py-2 hover:bg-amber-50 rounded">Smart Donations</Link></li>
-                <li><Link to="/features/deva-program" className="block px-3 py-2 hover:bg-amber-50 rounded">Deva Program</Link></li>
-                <li><Link to="/features/temple-merchandise" className="block px-3 py-2 hover:bg-amber-50 rounded">Temple Merchandise</Link></li>
-              </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
