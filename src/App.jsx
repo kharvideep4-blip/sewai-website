@@ -9,6 +9,8 @@ import KnowledgeBase from './pages/KnowledgeBase'
 import Media from './pages/Media'
 import TempleEnquiry from './pages/TempleEnquiry'
 import TemplePlatformRegistration from './pages/TemplePlatformRegistration'
+import BackgroundMusicPlayer from './components/BackgroundMusicPlayer'
+import './index.css'
 
 
 // ===== FEATURES =====
@@ -27,6 +29,7 @@ import TempleEMarketPlace from './pages/features/TempleEMarketPlace'
 import Capital from './pages/features/Capital'
 import TempleEducation from './pages/features/TempleEducation'
 import TempleHiring from './pages/features/TempleHiring'
+import HallBooking from './pages/features/HallBooking'
 
 
 
@@ -77,11 +80,14 @@ function App() {
            <Route path="/features/capital" element={<Capital />} />
         <Route path="/features/temple-education" element={<TempleEducation />} />
         <Route path="/features/temple-hiring" element={<TempleHiring />} />
+        <Route path="/features/hall-booking" element={<HallBooking />} />
         
        
       </Routes>
 
       <Footer />
+
+      <BackgroundMusicPlayer />
     </BrowserRouter>
   )
 }

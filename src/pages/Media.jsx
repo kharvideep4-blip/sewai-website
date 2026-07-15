@@ -15,13 +15,13 @@ const statsData = [
 ]
 
 const categoriesData = [
-  { id: 'all',  label: 'All Media' },
-  { id: 'rituals',  label: 'Rituals' },
-  { id: 'architecture',  label: 'Architecture' },
-  { id: 'festivals',  label: 'Festivals' },
-  { id: 'darshan',  label: 'Darshan' },
-  { id: 'music',  label: 'Music' },
-  { id: 'nature',  label: 'Nature' },
+  { id: 'all', label: 'All Media' },
+  { id: 'rituals', label: 'Rituals' },
+  { id: 'architecture', label: 'Architecture' },
+  { id: 'festivals', label: 'Festivals' },
+  { id: 'darshan', label: 'Darshan' },
+  { id: 'music', label: 'Music' },
+  { id: 'nature', label: 'Nature' },
 ]
 
 // ============================================================
@@ -90,7 +90,6 @@ const mediaData = [
     duration: '9:15',
     views: '5.4K',
   },
-
   // ===== ARCHITECTURE =====
   {
     id: 7,
@@ -152,7 +151,6 @@ const mediaData = [
     duration: '16:30',
     views: '5.8K',
   },
-
   // ===== FESTIVALS =====
   {
     id: 13,
@@ -234,7 +232,6 @@ const mediaData = [
     duration: '24:15',
     views: '31.8K',
   },
-
   // ===== DARSHAN =====
   {
     id: 21,
@@ -296,7 +293,6 @@ const mediaData = [
     duration: '18:45',
     views: '19.6K',
   },
-
   // ===== MUSIC =====
   {
     id: 27,
@@ -358,7 +354,6 @@ const mediaData = [
     duration: '30:15',
     views: '13.6K',
   },
-
   // ===== NATURE =====
   {
     id: 33,
@@ -435,12 +430,10 @@ function Media() {
     setSelectedVideo(null)
   }
 
-  // Get YouTube thumbnail URL from video ID
   const getThumbnailUrl = (videoId) => {
     return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
   }
 
-  // Get YouTube embed URL from video ID
   const getEmbedUrl = (videoId) => {
     return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`
   }
@@ -451,10 +444,27 @@ function Media() {
       <main className="pt-20">
 
         {/* ============================================================
-            MEDIA HERO
+            HERO SECTION WITH BACKGROUND VIDEO — MOVED FURTHER DOWN
             ============================================================ */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-[#1a0a0a] via-[#2d1508] to-[#1a0a0a] text-white border-b-4 border-orange-500">
-          <div className="w-full max-w-7xl mx-auto px-4 text-center">
+        <section className="relative py-20 md:py-28 text-white border-b-4 border-orange-500 overflow-hidden min-h-[50vh] flex items-center">
+          
+          {/* Background Video — Moved further down with top-20 */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover top-20"
+          >
+            <source src="/videos/temple-hero-bg.mp4" type="video/mp4" />
+            {/* Add more formats for compatibility if needed */}
+          </video>
+          
+          {/* Dark Overlay for text readability */}
+          <div className="absolute inset-0 bg-black/60"></div>
+
+          {/* Content */}
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-4 text-center">
             <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold">
               Temple <span className="text-amber-400">Media</span>
             </h1>
@@ -489,7 +499,7 @@ function Media() {
         </section>
 
         {/* ============================================================
-            FILTERS
+            FILTERS — NO ICONS
             ============================================================ */}
         <section className="py-8 bg-gradient-to-b from-cream to-amber-50/50 border-b-4 border-orange-500">
           <div className="w-full max-w-7xl mx-auto px-4">
@@ -504,7 +514,6 @@ function Media() {
                   }`}
                   onClick={() => setActiveFilter(cat.id)}
                 >
-                  <span className="mr-1">{cat.icon}</span>
                   {cat.label}
                 </button>
               ))}
@@ -530,7 +539,6 @@ function Media() {
 
             {filteredMedia.length === 0 ? (
               <div className="text-center py-12">
-                <div className="text-6xl mb-4">🎬</div>
                 <h3 className="font-playfair text-2xl font-bold text-darkBg">No videos found</h3>
                 <p className="text-gray-600 mt-2">Try selecting a different category</p>
               </div>
@@ -548,7 +556,7 @@ function Media() {
                         alt={item.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         onError={(e) => {
-                          e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360"%3E%3Crect width="480" height="360" fill="%23fdf6f0"/%3E%3Ctext x="50%25" y="50%25" font-size="60" text-anchor="middle" dy=".3em" fill="%23E85D26"%3E🎬%3C/text%3E%3C/svg%3E'
+                          e.target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360"%3E%3Crect width="480" height="360" fill="%23fdf6f0"/%3E%3Ctext x="50%25" y="50%25" font-size="60" text-anchor="middle" dy=".3em" fill="%23E85D26"%3E%3C/text%3E%3C/svg%3E'
                         }}
                       />
                       <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/50 transition-all duration-300">
@@ -571,7 +579,7 @@ function Media() {
                         {item.description}
                       </p>
                       <div className="flex justify-between items-center mt-3 text-xs text-gray-400">
-                        <span>👁️ {item.views} views</span>
+                        <span>{item.views} views</span>
                         <span className="text-orange-500 font-semibold group-hover:text-orange-600 transition-colors">
                           Watch Now →
                         </span>
@@ -619,8 +627,8 @@ function Media() {
                   {selectedVideo.description}
                 </p>
                 <div className="flex gap-4 mt-3 text-sm text-gray-400">
-                  <span>🕐 {selectedVideo.duration}</span>
-                  <span>👁️ {selectedVideo.views} views</span>
+                  <span>{selectedVideo.duration}</span>
+                  <span>{selectedVideo.views} views</span>
                   <span className="text-orange-500 font-medium">#{selectedVideo.tag}</span>
                 </div>
               </div>
@@ -645,13 +653,13 @@ function Media() {
                   to="/contact"
                   className="bg-gradient-to-r from-yellow-500 to-amber-500 text-darkBg font-bold py-2.5 px-7 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/30"
                 >
-                  🎥 Submit Your Video
+                  Submit Your Video
                 </Link>
                 <Link
                   to="/knowledge-base"
                   className="border-2 border-amber-500 text-amber-400 font-semibold py-2.5 px-7 rounded-full transition-all duration-300 hover:bg-amber-500 hover:text-white hover:scale-105"
                 >
-                  📚 Explore Knowledge Base
+                  Explore Knowledge Base
                 </Link>
               </div>
             </div>
