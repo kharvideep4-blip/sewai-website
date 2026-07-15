@@ -1,97 +1,97 @@
 import { Link } from 'react-router-dom'
 
-function TempleVisitorManagement() {
+function TempleHiring() {
   const stats = [
-    { number: '10K+', label: 'Daily Visitors' },
-    { number: '98%', label: 'Satisfaction Rate' },
-    { number: '50+', label: 'Temples Using' },
-    { number: '24/7', label: 'Monitoring' },
+    { number: '500+', label: 'Positions Filled' },
+    { number: '100+', label: 'Partner Temples' },
+    { number: '50+', label: 'Priests Placed' },
+    { number: '98%', label: 'Success Rate' },
   ]
 
   const features = [
     {
       id: 1,
-      title: 'Visitor Registration',
-      description: 'Simple and fast check-in/check-out system for devotees visiting the temple, capturing essential details for a safe and organized experience.',
+      title: 'Priest Recruitment & Placement',
+      description: 'Comprehensive priest recruitment services including screening, verification, and placement at temples across India.',
       bgColor: 'from-purple-600 to-purple-400',
     },
     {
       id: 2,
-      title: 'Entry Pass Management',
-      description: 'Generate and manage digital entry passes for darshan, special events, and VIP access with QR code verification.',
-      bgColor: 'from-blue-500 to-blue-600',
-    },
-    {
-      id: 3,
-      title: 'Queue & Crowd Control',
-      description: 'Intelligent queue management system to ensure smooth flow of devotees, minimize waiting times, and maintain order during peak hours and festivals.',
+      title: 'Temple Staff Hiring',
+      description: 'End-to-end hiring services for temple staff including administrators, accountants, security, and support personnel.',
       bgColor: 'from-orange-500 to-amber-500',
     },
     {
-      id: 4,
-      title: 'Special Entry Management',
-      description: 'Dedicated entry management for senior citizens, specially-abled devotees, VIPs, and emergency access with priority lanes.',
+      id: 3,
+      title: 'Volunteer Management',
+      description: 'Efficient volunteer recruitment, onboarding, scheduling, and management for temple events and daily operations.',
       bgColor: 'from-green-500 to-green-600',
+    },
+    {
+      id: 4,
+      title: 'Skill Development Programs',
+      description: 'Training and skill development programs for priests, staff, and volunteers to enhance temple service quality.',
+      bgColor: 'from-blue-500 to-blue-600',
     },
   ]
 
   const services = [
     {
-      label: 'Visitor Registration & Check-in',
-      desc: 'Capture visitor details including name, contact, and purpose of visit with timestamp for record keeping.',
+      label: 'Priest Recruitment & Verification',
+      desc: 'Comprehensive recruitment of qualified priests with thorough background verification and skill assessment.',
     },
     {
-      label: 'Digital Darshan Passes',
-      desc: 'Issue time-slotted darshan passes with QR codes for quick scanning and verification at entry points.',
+      label: 'Staff Hiring & Onboarding',
+      desc: 'Complete hiring and onboarding services for temple staff across all departments and roles.',
     },
     {
-      label: 'Crowd Analytics Dashboard',
-      desc: 'Real-time monitoring of footfall, peak hours, and visitor patterns to optimize temple operations.',
+      label: 'Volunteer Coordination',
+      desc: 'Efficient volunteer management from recruitment to scheduling and performance tracking.',
     },
     {
-      label: 'Queue Management System',
-      desc: 'Automated queue allocation with token system to reduce waiting time and improve devotee experience.',
+      label: 'Training & Development',
+      desc: 'Skill development and training programs for temple personnel to enhance service quality.',
     },
     {
-      label: 'VIP & Senior Citizen Access',
-      desc: 'Priority entry for elderly, differently-abled, VIPs, and special devotees with dedicated entry lanes.',
+      label: 'Payroll & Compliance',
+      desc: 'Professional payroll management and compliance services for temple employees.',
     },
     {
-      label: 'Safety & Security Monitoring',
-      desc: 'Continuous surveillance and incident reporting to ensure a safe environment for all devotees.',
+      label: 'Career Counseling & Guidance',
+      desc: 'Career guidance and counseling for individuals seeking temple-based employment opportunities.',
     },
   ]
 
   const benefits = [
     {
       id: 1,
-      title: 'Efficient Visitor Flow',
-      desc: 'Optimize the movement of devotees throughout the temple premises with smart crowd management.',
+      title: 'Qualified Priests & Staff',
+      desc: 'Access to a network of qualified priests, staff, and volunteers for temple services.',
     },
     {
       id: 2,
-      title: 'Enhanced Safety',
-      desc: 'Track every entry and exit, ensuring only authorized visitors are on the premises and quick response to incidents.',
+      title: 'Time-Saving Recruitment',
+      desc: 'Save valuable time with streamlined recruitment and hiring processes.',
     },
     {
       id: 3,
-      title: 'Improved Devotee Experience',
-      desc: 'Reduce waiting times and provide a smooth, organized darshan experience for all devotees.',
+      title: 'Quality Assurance',
+      desc: 'Ensure quality of temple services through thorough screening and verification.',
     },
     {
       id: 4,
-      title: 'Data-Driven Decisions',
-      desc: 'Analyze visitor patterns and trends to improve temple services, staffing, and resource allocation.',
+      title: 'Community Engagement',
+      desc: 'Engage with the community through volunteer programs and service opportunities.',
     },
     {
       id: 5,
-      title: 'Festival Preparedness',
-      desc: 'Handle large crowds during festivals and special events with proven crowd control strategies.',
+      title: 'Professional Management',
+      desc: 'Professional management of temple staff, volunteers, and hiring processes.',
     },
     {
       id: 6,
-      title: 'Transparent Operations',
-      desc: 'Maintain clear records of visitor flow and security incidents for accountability and improvement.',
+      title: 'Sustainable Staffing',
+      desc: 'Build a sustainable staffing model with continuous support and development.',
     },
   ]
 
@@ -102,11 +102,11 @@ function TempleVisitorManagement() {
       <section className="py-20 md:py-28 bg-gradient-to-br from-[#1a0a0a] via-[#2d1508] to-[#1a0a0a] text-white border-b-4 border-orange-500">
         <div className="w-full max-w-7xl mx-auto px-4 text-center">
           <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold">
-            Temple <span className="text-amber-400">Visitor Management</span>
+            Temple <span className="text-amber-400">Hiring</span>
           </h1>
           <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto my-4 rounded-full"></div>
           <p className="text-base md:text-lg text-amber-400/80 max-w-2xl mx-auto leading-relaxed">
-            Comprehensive visitor management system for temples – from registration and entry passes to crowd control and safety monitoring.
+            Professional recruitment and staffing services for temples including priests, staff, volunteers, and specialized temple personnel.
           </p>
         </div>
       </section>
@@ -138,14 +138,14 @@ function TempleVisitorManagement() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="font-playfair text-3xl md:text-4xl font-bold text-darkBg">
-                What is <span className="text-amber-500">Temple Visitor Management?</span>
+                What is <span className="text-amber-500">Temple Hiring?</span>
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 my-4 rounded-full"></div>
               <p className="text-gray-600 text-base leading-relaxed">
-                Temple Visitor Management is a comprehensive system designed to streamline the entry, movement, and overall experience of devotees visiting the temple. From registration at the entrance to managing queues for darshan, our solution ensures a seamless and safe experience for all.
+                Temple Hiring is a specialized recruitment service that connects qualified priests, staff, and volunteers with temples and spiritual organizations. We provide end-to-end hiring solutions from candidate screening and verification to onboarding and training.
               </p>
               <p className="text-gray-600 text-base leading-relaxed mt-4">
-                With features like digital entry passes, real-time crowd analytics, priority access for senior citizens, and security monitoring, temple administrators can maintain order, reduce waiting times, and enhance the spiritual journey of every visitor.
+                Our services include priest recruitment, staff hiring, volunteer management, skill development programs, and payroll management, ensuring that temples have access to skilled, dedicated personnel who can serve their communities with devotion and professionalism.
               </p>
               <Link to="/contact" className="inline-block mt-6 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/30">
                 Learn More →
@@ -153,8 +153,8 @@ function TempleVisitorManagement() {
             </div>
             <div className="bg-gradient-to-br from-orange-500 to-amber-500 rounded-2xl p-8 text-center text-white shadow-xl min-h-[200px] flex flex-col items-center justify-center">
               <span className="text-6xl font-bold mb-3 opacity-20">01</span>
-              <h3 className="font-playfair text-2xl font-bold">Seamless Visitor Experience</h3>
-              <p className="text-white/80 text-sm max-w-sm mt-2">Effortless entry, organized darshan, and safe environment for every devotee.</p>
+              <h3 className="font-playfair text-2xl font-bold">Connect Talent with Temples</h3>
+              <p className="text-white/80 text-sm max-w-sm mt-2">Professional recruitment services connecting skilled personnel with temple communities.</p>
             </div>
           </div>
         </div>
@@ -168,7 +168,7 @@ function TempleVisitorManagement() {
               Key <span className="text-amber-500">Features</span>
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto my-3 rounded-full"></div>
-            <p className="text-gray-600 text-sm">Comprehensive tools to manage temple visitors efficiently and safely.</p>
+            <p className="text-gray-600 text-sm">Comprehensive hiring and staffing services for temple communities.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -188,15 +188,15 @@ function TempleVisitorManagement() {
         </div>
       </section>
 
-      {/* ===== SERVICES DETAILED ===== */}
+      {/* ===== SERVICES ===== */}
       <section className="py-16 bg-gradient-to-b from-amber-50/30 to-cream border-b-4 border-orange-500">
         <div className="w-full max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-darkBg">
-              Visitor Management <span className="text-amber-500">Services</span>
+              Hiring <span className="text-amber-500">Services</span>
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto my-3 rounded-full"></div>
-            <p className="text-gray-600 text-sm">End-to-end services for managing temple visitors.</p>
+            <p className="text-gray-600 text-sm">End-to-end hiring and staffing services for temples.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
@@ -218,10 +218,10 @@ function TempleVisitorManagement() {
         <div className="w-full max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-darkBg">
-              Benefits of <span className="text-amber-500">Visitor Management</span>
+              Benefits of <span className="text-amber-500">Temple Hiring</span>
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto my-3 rounded-full"></div>
-            <p className="text-gray-600 text-sm">Why every temple needs a structured visitor management system.</p>
+            <p className="text-gray-600 text-sm">Why professional hiring services are essential for temples.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -243,27 +243,21 @@ function TempleVisitorManagement() {
         </div>
       </section>
 
-      {/* ===== CTA SECTION ===== */}
+      {/* ===== CTA ===== */}
       <section className="py-16 bg-gradient-to-br from-[#1a0a0a] via-[#2d1508] to-[#1a0a0a] text-white">
         <div className="w-full max-w-7xl mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto border border-amber-500/20 rounded-2xl p-8 md:p-12 bg-amber-500/5 backdrop-blur-sm">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-playfair font-bold text-amber-400">
-              Ensure Safe & Organized Temple Visits
+              Find the Right Talent for Your Temple
             </h2>
             <p className="mt-3 text-gray-400 max-w-2xl mx-auto text-base leading-relaxed">
-              Implement a robust visitor management system to enhance devotee experience and temple security.
+              Connect with qualified priests, dedicated staff, and passionate volunteers through our professional hiring services.
             </p>
             <div className="flex flex-wrap gap-4 justify-center mt-8">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-yellow-500 to-amber-500 text-darkBg font-bold py-2.5 px-7 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/30"
-              >
+              <Link to="/contact" className="bg-gradient-to-r from-yellow-500 to-amber-500 text-darkBg font-bold py-2.5 px-7 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/30">
                 Get Started
               </Link>
-              <Link
-                to="/features"
-                className="border-2 border-amber-500 text-amber-400 font-semibold py-2.5 px-7 rounded-full transition-all duration-300 hover:bg-amber-500 hover:text-white hover:scale-105"
-              >
+              <Link to="/features" className="border-2 border-amber-500 text-amber-400 font-semibold py-2.5 px-7 rounded-full transition-all duration-300 hover:bg-amber-500 hover:text-white hover:scale-105">
                 Explore All Features
               </Link>
             </div>
@@ -275,4 +269,4 @@ function TempleVisitorManagement() {
   )
 }
 
-export default TempleVisitorManagement
+export default TempleHiring

@@ -21,6 +21,13 @@ import Procedures from './pages/features/Procedures'
 import SmartDonations from './pages/features/SmartDonations'
 import DevaProgram from './pages/features/DevaProgram'
 import TempleMerchandise from './pages/features/TempleMerchandise'
+import TempleTrueNoms from './pages/services/TempleTrueNoms'
+// import TempleEmarketPlace from './pages/features/TempleEmarketPlace'
+import TempleEMarketPlace from './pages/features/TempleEMarketPlace'
+import Capital from './pages/features/Capital'
+import TempleEducation from './pages/features/TempleEducation'
+import TempleHiring from './pages/features/TempleHiring'
+
 
 
 
@@ -30,6 +37,9 @@ import TempleSecurity from './pages/services/TempleSecurity'
 import TempleMaps from './pages/services/TempleMaps'
 import TempleVisitorManagement from './pages/services/TempleVisitorManagement'
 import TempleTimeSchedule from './pages/services/TempleTimeSchedule'
+import TempleDelicateMoments from './pages/services/TempleDelicateMoments'
+import TempleTourism from './pages/services/TempleTourism'
+import KeyTempleEvent from './pages/services/KeyTempleEvent'
 
 
 
@@ -59,7 +69,18 @@ function App() {
         <Route path="/features/temple-services/temple-maps" element={<TempleMaps />} />
         <Route path="/features/temple-services/temple-visitor-management" element={<TempleVisitorManagement />} />
         <Route path="/features/temple-services/temple-time-schedule" element={<TempleTimeSchedule />} />
+        <Route path="/features/temple-services/temple-delicate-moments" element={<TempleDelicateMoments />} />
+       <Route path="/features/temple-services/temple-tourism" element={<TempleTourism />} />
+       <Route path="/features/temple-services/temple-true-noms" element={<TempleTrueNoms />} />
+        <Route path="/features/temple-services/key-temple-event" element={<KeyTempleEvent />} />
+         <Route path="/features/temple-e-marketplace" element={<TempleEMarketPlace />} />
+           <Route path="/features/capital" element={<Capital />} />
+        <Route path="/features/temple-education" element={<TempleEducation />} />
+        <Route path="/features/temple-hiring" element={<TempleHiring />} />
+        
+       
       </Routes>
+
       <Footer />
     </BrowserRouter>
   )

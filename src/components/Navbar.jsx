@@ -89,7 +89,10 @@ function Navbar() {
             </button>
             <div className={`lg:absolute lg:left-0 lg:mt-2 lg:w-80 bg-white text-gray-700 border border-gray-200 rounded-lg shadow-lg p-2 ${featuresOpen ? 'block' : 'hidden'} lg:group-hover:block`}>
               <ul className="space-y-1">
-                {/* Temple Services – now with horizontal grid */}
+                {/* NEW: Capital at the start */}
+                <li><Link to="/features/capital" className="block px-3 py-2 hover:bg-amber-50 rounded font-semibold text-amber-600">Capital</Link></li>
+
+                {/* Temple Services – with sub-dropdown */}
                 <li className="relative group/sub">
                   <button onClick={toggleServices} className="flex items-center justify-between w-full px-3 py-2 hover:bg-amber-50 rounded">
                     Temple Services <i className="fas fa-chevron-right ml-2 text-xs"></i>
@@ -108,12 +111,20 @@ function Navbar() {
                     </li>
                   </ul>
                 </li>
+
+                {/* Main Features */}
                 <li><Link to="/features/setting-up" className="block px-3 py-2 hover:bg-amber-50 rounded">Setting Up</Link></li>
                 <li><Link to="/features/devotee-connect" className="block px-3 py-2 hover:bg-amber-50 rounded">Devotee Connect</Link></li>
                 <li><Link to="/features/payment-gateway" className="block px-3 py-2 hover:bg-amber-50 rounded">Payment Gateway</Link></li>
-                <li><Link to="/features/calendar-events" className="block px-3 py-2 hover:bg-amber-50 rounded">Temple Events</Link></li>
+
+                {/* NEW: Temple Education (replaces Temple Events) */}
+                <li><Link to="/features/temple-education" className="block px-3 py-2 hover:bg-amber-50 rounded">Temple Education</Link></li>
+
+                {/* NEW: Temple Hiring */}
+                <li><Link to="/features/temple-hiring" className="block px-3 py-2 hover:bg-amber-50 rounded">Temple Hiring</Link></li>
+
                 <li><Link to="/features/hall-booking" className="block px-3 py-2 hover:bg-amber-50 rounded">Hall Booking</Link></li>
-                <li><Link to="/features/ecommerce" className="block px-3 py-2 hover:bg-amber-50 rounded">Temple E‑MarketPlace</Link></li>
+                <li><Link to="/features/temple-e-marketplace" className="block px-3 py-2 hover:bg-amber-50 rounded">Temple E‑MarketPlace</Link></li>
                 <li><Link to="/features/inventory" className="block px-3 py-2 hover:bg-amber-50 rounded">Inventory</Link></li>
                 <li><Link to="/features/ai-features" className="block px-3 py-2 hover:bg-amber-50 rounded">AI Features</Link></li>
                 <li><Link to="/features/procedures" className="block px-3 py-2 hover:bg-amber-50 rounded">Procedures</Link></li>

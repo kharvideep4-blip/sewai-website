@@ -1,97 +1,72 @@
 import { Link } from 'react-router-dom'
 
-function TempleVisitorManagement() {
+function Capital() {
   const stats = [
-    { number: '10K+', label: 'Daily Visitors' },
+    { number: '500+', label: 'Temples Supported' },
+    { number: '50K+', label: 'Pilgrims Benefited' },
+    { number: '100+', label: 'Heritage Projects' },
     { number: '98%', label: 'Satisfaction Rate' },
-    { number: '50+', label: 'Temples Using' },
-    { number: '24/7', label: 'Monitoring' },
   ]
 
   const features = [
     {
       id: 1,
-      title: 'Visitor Registration',
-      description: 'Simple and fast check-in/check-out system for devotees visiting the temple, capturing essential details for a safe and organized experience.',
+      title: 'Heritage Conservation',
+      description: 'Restoration and preservation of ancient temple architecture, sculptures, and cultural artifacts through capital funding.',
       bgColor: 'from-purple-600 to-purple-400',
     },
     {
       id: 2,
-      title: 'Entry Pass Management',
-      description: 'Generate and manage digital entry passes for darshan, special events, and VIP access with QR code verification.',
-      bgColor: 'from-blue-500 to-blue-600',
+      title: 'Sustainable Tourism',
+      description: 'Eco-friendly pilgrimage infrastructure, waste management, and green energy initiatives supported by temple capital.',
+      bgColor: 'from-green-500 to-green-600',
     },
     {
       id: 3,
-      title: 'Queue & Crowd Control',
-      description: 'Intelligent queue management system to ensure smooth flow of devotees, minimize waiting times, and maintain order during peak hours and festivals.',
+      title: 'Community Empowerment',
+      description: 'Skill development, livelihood generation, and welfare programs for local communities funded through temple capital.',
       bgColor: 'from-orange-500 to-amber-500',
     },
     {
       id: 4,
-      title: 'Special Entry Management',
-      description: 'Dedicated entry management for senior citizens, specially-abled devotees, VIPs, and emergency access with priority lanes.',
-      bgColor: 'from-green-500 to-green-600',
-    },
-  ]
-
-  const services = [
-    {
-      label: 'Visitor Registration & Check-in',
-      desc: 'Capture visitor details including name, contact, and purpose of visit with timestamp for record keeping.',
-    },
-    {
-      label: 'Digital Darshan Passes',
-      desc: 'Issue time-slotted darshan passes with QR codes for quick scanning and verification at entry points.',
-    },
-    {
-      label: 'Crowd Analytics Dashboard',
-      desc: 'Real-time monitoring of footfall, peak hours, and visitor patterns to optimize temple operations.',
-    },
-    {
-      label: 'Queue Management System',
-      desc: 'Automated queue allocation with token system to reduce waiting time and improve devotee experience.',
-    },
-    {
-      label: 'VIP & Senior Citizen Access',
-      desc: 'Priority entry for elderly, differently-abled, VIPs, and special devotees with dedicated entry lanes.',
-    },
-    {
-      label: 'Safety & Security Monitoring',
-      desc: 'Continuous surveillance and incident reporting to ensure a safe environment for all devotees.',
+      title: 'Digital Pilgrimage',
+      description: 'Technology-enabled pilgrimage experiences with virtual darshan, online services, and digital guides funded by temple capital.',
+      bgColor: 'from-blue-500 to-blue-600',
     },
   ]
 
   const benefits = [
     {
-      id: 1,
-      title: 'Efficient Visitor Flow',
-      desc: 'Optimize the movement of devotees throughout the temple premises with smart crowd management.',
+      label: 'Heritage Preservation',
+      desc: 'Contribute to the restoration and preservation of ancient temples and cultural heritage sites for future generations.',
     },
     {
-      id: 2,
-      title: 'Enhanced Safety',
-      desc: 'Track every entry and exit, ensuring only authorized visitors are on the premises and quick response to incidents.',
+      label: 'Community Development',
+      desc: 'Support local communities through employment generation, skill development, and welfare programs.',
     },
     {
-      id: 3,
-      title: 'Improved Devotee Experience',
-      desc: 'Reduce waiting times and provide a smooth, organized darshan experience for all devotees.',
+      label: 'Environmental Sustainability',
+      desc: 'Promote eco-friendly pilgrimage practices, waste management, and green energy adoption.',
     },
     {
-      id: 4,
-      title: 'Data-Driven Decisions',
-      desc: 'Analyze visitor patterns and trends to improve temple services, staffing, and resource allocation.',
+      label: 'Brand Enhancement',
+      desc: 'Build a positive corporate image through meaningful CSR initiatives aligned with cultural heritage.',
     },
     {
-      id: 5,
-      title: 'Festival Preparedness',
-      desc: 'Handle large crowds during festivals and special events with proven crowd control strategies.',
+      label: 'Spiritual Connection',
+      desc: 'Create a deeper connection with spiritual and cultural values through meaningful contributions.',
     },
     {
-      id: 6,
-      title: 'Transparent Operations',
-      desc: 'Maintain clear records of visitor flow and security incidents for accountability and improvement.',
+      label: 'Tourism Growth',
+      desc: 'Support sustainable pilgrimage tourism that benefits local economies and cultural preservation.',
+    },
+    {
+      label: 'Strategic Partnership',
+      desc: 'Partner with temples, government bodies, and NGOs for impactful CSR initiatives.',
+    },
+    {
+      label: 'Measurable Impact',
+      desc: 'Track and measure the impact of CSR initiatives through comprehensive reporting and analytics.',
     },
   ]
 
@@ -102,11 +77,11 @@ function TempleVisitorManagement() {
       <section className="py-20 md:py-28 bg-gradient-to-br from-[#1a0a0a] via-[#2d1508] to-[#1a0a0a] text-white border-b-4 border-orange-500">
         <div className="w-full max-w-7xl mx-auto px-4 text-center">
           <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold">
-            Temple <span className="text-amber-400">Visitor Management</span>
+            Temple <span className="text-amber-400">Capital</span>
           </h1>
           <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto my-4 rounded-full"></div>
           <p className="text-base md:text-lg text-amber-400/80 max-w-2xl mx-auto leading-relaxed">
-            Comprehensive visitor management system for temples – from registration and entry passes to crowd control and safety monitoring.
+            Strategic capital management for temple heritage conservation, sustainable pilgrimage development, and community empowerment.
           </p>
         </div>
       </section>
@@ -138,23 +113,23 @@ function TempleVisitorManagement() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="font-playfair text-3xl md:text-4xl font-bold text-darkBg">
-                What is <span className="text-amber-500">Temple Visitor Management?</span>
+                What is <span className="text-amber-500">Temple Capital?</span>
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 my-4 rounded-full"></div>
               <p className="text-gray-600 text-base leading-relaxed">
-                Temple Visitor Management is a comprehensive system designed to streamline the entry, movement, and overall experience of devotees visiting the temple. From registration at the entrance to managing queues for darshan, our solution ensures a seamless and safe experience for all.
+                Temple Capital is a strategic initiative that combines financial resources with temple heritage conservation, sustainable pilgrimage development, and community welfare. It enables temples and corporations to contribute meaningfully to the preservation of India's rich spiritual and cultural heritage while creating positive social impact.
               </p>
               <p className="text-gray-600 text-base leading-relaxed mt-4">
-                With features like digital entry passes, real-time crowd analytics, priority access for senior citizens, and security monitoring, temple administrators can maintain order, reduce waiting times, and enhance the spiritual journey of every visitor.
+                Through this program, temples and businesses can partner to support infrastructure development, heritage conservation, environmental sustainability, and community empowerment projects, ensuring the long-term sustainability of temple communities.
               </p>
               <Link to="/contact" className="inline-block mt-6 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/30">
-                Learn More →
+                Partner With Us →
               </Link>
             </div>
             <div className="bg-gradient-to-br from-orange-500 to-amber-500 rounded-2xl p-8 text-center text-white shadow-xl min-h-[200px] flex flex-col items-center justify-center">
               <span className="text-6xl font-bold mb-3 opacity-20">01</span>
-              <h3 className="font-playfair text-2xl font-bold">Seamless Visitor Experience</h3>
-              <p className="text-white/80 text-sm max-w-sm mt-2">Effortless entry, organized darshan, and safe environment for every devotee.</p>
+              <h3 className="font-playfair text-2xl font-bold">Sustainable Temple Growth</h3>
+              <p className="text-white/80 text-sm max-w-sm mt-2">Preserving heritage, empowering communities, and creating sustainable pilgrimage experiences through strategic capital management.</p>
             </div>
           </div>
         </div>
@@ -168,7 +143,7 @@ function TempleVisitorManagement() {
               Key <span className="text-amber-500">Features</span>
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto my-3 rounded-full"></div>
-            <p className="text-gray-600 text-sm">Comprehensive tools to manage temple visitors efficiently and safely.</p>
+            <p className="text-gray-600 text-sm">Our Temple Capital initiatives focus on sustainable development and heritage preservation.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -188,55 +163,25 @@ function TempleVisitorManagement() {
         </div>
       </section>
 
-      {/* ===== SERVICES DETAILED ===== */}
+      {/* ===== BENEFITS SECTION ===== */}
       <section className="py-16 bg-gradient-to-b from-amber-50/30 to-cream border-b-4 border-orange-500">
         <div className="w-full max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-darkBg">
-              Visitor Management <span className="text-amber-500">Services</span>
+              Temple Capital <span className="text-amber-500">Benefits</span>
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto my-3 rounded-full"></div>
-            <p className="text-gray-600 text-sm">End-to-end services for managing temple visitors.</p>
+            <p className="text-gray-600 text-sm">How Temple Capital creates value for temples, businesses, and communities.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
-            {services.map((service, index) => (
+            {benefits.map((benefit, index) => (
               <div key={index} className="flex gap-3 items-start p-3 border-b border-amber-100/30 last:border-0">
                 <span className="text-orange-500 font-bold text-sm mt-0.5">{String(index + 1).padStart(2, '0')}</span>
                 <div>
-                  <strong className="text-darkBg text-sm">{service.label}</strong>
-                  <p className="text-gray-600 text-sm">{service.desc}</p>
+                  <strong className="text-darkBg text-sm">{benefit.label}</strong>
+                  <p className="text-gray-600 text-sm">{benefit.desc}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ===== BENEFITS ===== */}
-      <section className="py-16 bg-gradient-to-b from-cream to-amber-50/50 border-b-4 border-orange-500">
-        <div className="w-full max-w-7xl mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-darkBg">
-              Benefits of <span className="text-amber-500">Visitor Management</span>
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto my-3 rounded-full"></div>
-            <p className="text-gray-600 text-sm">Why every temple needs a structured visitor management system.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {benefits.map((benefit) => (
-              <div
-                key={benefit.id}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-amber-100/50"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="w-8 h-8 rounded-full bg-orange-500/10 text-orange-500 font-bold text-sm flex items-center justify-center">
-                    {String(benefit.id).padStart(2, '0')}
-                  </span>
-                  <h3 className="font-playfair text-lg font-bold text-darkBg">{benefit.title}</h3>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed pl-11">{benefit.desc}</p>
               </div>
             ))}
           </div>
@@ -248,17 +193,17 @@ function TempleVisitorManagement() {
         <div className="w-full max-w-7xl mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto border border-amber-500/20 rounded-2xl p-8 md:p-12 bg-amber-500/5 backdrop-blur-sm">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-playfair font-bold text-amber-400">
-              Ensure Safe & Organized Temple Visits
+              Partner for Sustainable Impact
             </h2>
             <p className="mt-3 text-gray-400 max-w-2xl mx-auto text-base leading-relaxed">
-              Implement a robust visitor management system to enhance devotee experience and temple security.
+              Join us in preserving India's temple heritage and creating sustainable pilgrimage experiences through strategic capital initiatives.
             </p>
             <div className="flex flex-wrap gap-4 justify-center mt-8">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-yellow-500 to-amber-500 text-darkBg font-bold py-2.5 px-7 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/30"
               >
-                Get Started
+                Partner With Us
               </Link>
               <Link
                 to="/features"
@@ -275,4 +220,4 @@ function TempleVisitorManagement() {
   )
 }
 
-export default TempleVisitorManagement
+export default Capital
