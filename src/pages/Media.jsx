@@ -659,7 +659,7 @@ function Media() {
         </section>
 
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

@@ -438,7 +438,7 @@ function TemplePlatformRegistration() {
         </section>
 
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

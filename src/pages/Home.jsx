@@ -283,7 +283,7 @@ function Home() {
         </section>
 
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

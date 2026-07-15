@@ -575,7 +575,7 @@ function TempleEnquiry() {
         </section>
 
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

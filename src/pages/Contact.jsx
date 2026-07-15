@@ -379,7 +379,7 @@ function Contact() {
         </section>
 
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

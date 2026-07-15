@@ -462,7 +462,7 @@ function KnowledgeBase() {
         </section>
 
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
