@@ -10,13 +10,16 @@ const statsData = [
   { number: '24/7', label: 'Support' },
 ]
 
+// What SEWAI Means – now 5 pillars (added Intelligence)
 const meaningData = [
   { title: 'Service', desc: 'Seva and devotion at the core of everything we build' },
   { title: 'Efficiency', desc: 'Streamlined processes for seamless temple operations' },
   { title: 'Wisdom', desc: 'Ancient wisdom guided by modern analytics' },
   { title: 'Automation', desc: 'Intelligent automation for spiritual administration' },
+  { title: 'Intelligence', desc: 'Data‑driven insights for smarter temple management' },
 ]
 
+// Core values – no icons
 const valuesData = [
   { title: 'Devotion First', desc: 'Every feature is designed with deep respect for spiritual traditions and devotee needs.' },
   { title: 'Trust & Security', desc: 'Sacred data protection with enterprise-grade security and complete transparency.' },
@@ -24,6 +27,7 @@ const valuesData = [
   { title: 'Excellence', desc: 'Continuous innovation in temple management while preserving traditional values.' },
 ]
 
+// Leadership team
 const leadersData = [
   { initials: 'NM', name: 'Nilesh Mistry', title: 'Founder & CEO', desc: 'Former temple administrator with 15+ years of experience in spiritual management and technology innovation.', color: 'from-orange-500 to-amber-500' },
   { initials: 'JB', name: 'Jatin Batodadra', title: 'CTO & Co-founder', desc: 'Technology leader with expertise in cloud architecture and spiritual technology solutions.', color: 'from-purple-600 to-purple-400' },
@@ -74,7 +78,6 @@ function About() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-              {/* Vision Image Box */}
               <div className="w-full h-64 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center relative">
                 <img
                   src="/assets/images/vision-bg.jpg"
@@ -86,34 +89,27 @@ function About() {
                   }}
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white text-center">
-                  <span className="text-lg font-bold"> The Vision Behind SEWAI</span>
+                  <span className="text-lg font-bold">The Vision Behind SEWAI</span>
                 </div>
               </div>
 
               <div>
                 <h3 className="font-playfair text-2xl font-bold text-darkBg mb-4">The Vision Behind SEWAI</h3>
                 <p className="text-gray-700 leading-relaxed mb-3">
-                  <strong>SEWAI</strong> (
-                  Sacred Enterprise for Worship
-                  Administration & Integration )
-                  was born from a simple yet profound realization: temples, the spiritual hearts of our communities,
-                  needed modern tools to better serve their devotees while preserving their sacred traditions.
+                  <strong>SEWAI</strong> (Sacred Enterprise for Worship Administration & Integration) was born from a simple yet profound realization: temples, the spiritual hearts of our communities, needed modern tools to better serve their devotees while preserving their sacred traditions.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-3">
-                  Founded in 2020 by a team of technologists and temple administrators, we witnessed firsthand the
-                  challenges faced in handling donations, organizing events, managing inventories, and connecting
-                  with devotees in the digital age.
+                  Founded in 2020 by a team of technologists and temple administrators, we witnessed firsthand the challenges faced in handling donations, organizing events, managing inventories, and connecting with devotees in the digital age.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  Our mission became clear: create technology that honors tradition while embracing innovation,
-                  enabling temples to focus on their primary purpose – nurturing spiritual growth and community service.
+                  Our mission became clear: create technology that honors tradition while embracing innovation, enabling temples to focus on their primary purpose – nurturing spiritual growth and community service.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ===== WHAT SEWAI MEANS ===== */}
+        {/* ===== WHAT SEWAI MEANS – UPDATED ===== */}
         <section className="py-16 bg-gradient-to-b from-amber-50/30 to-cream border-b-4 border-orange-500">
           <div className="w-full max-w-7xl mx-auto px-4">
             <div className="text-center mb-10">
@@ -121,13 +117,13 @@ function About() {
                 What <span className="text-amber-500">SEWAI</span> Means
               </h2>
               <div className="section-line w-20 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto my-3 rounded-full"></div>
-              <p className="section-subtitle text-sm text-gray-600">The four pillars that define our purpose and drive our innovation</p>
+              <p className="section-subtitle text-sm text-gray-600">The five pillars that define our purpose and drive our innovation</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {/* Grid updated to 5 columns on large screens */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
               {meaningData.map((m, i) => (
                 <div key={i} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-amber-100/50 text-center">
-                  <div className="text-4xl mb-3">{m.icon}</div>
                   <h3 className="font-playfair text-lg font-bold text-darkBg">{m.title}</h3>
                   <p className="text-gray-600 text-sm mt-1 leading-relaxed">{m.desc}</p>
                 </div>
@@ -150,7 +146,6 @@ function About() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {valuesData.map((v, i) => (
                 <div key={i} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-amber-100/50 text-center">
-                  <div className="text-4xl mb-3">{v.icon}</div>
                   <h3 className="font-playfair text-lg font-bold text-darkBg">{v.title}</h3>
                   <p className="text-gray-600 text-sm mt-1 leading-relaxed">{v.desc}</p>
                 </div>

@@ -39,7 +39,6 @@ function Navbar() {
     <nav className={`fixed top-0 left-0 w-full z-50 bg-white transition-transform duration-300 ${isHidden ? '-translate-y-full' : 'translate-y-0'}`}>
       {/* Top Row: 3-column grid for perfect centering */}
       <div className="grid grid-cols-3 items-center px-4 py-3">
-        {/* Left column: hamburger (mobile) + empty placeholder (desktop) */}
         <div className="flex items-center">
           <button
             onClick={toggleMenu}
@@ -50,7 +49,6 @@ function Navbar() {
           <div className="hidden lg:block w-10"></div>
         </div>
 
-        {/* Center column: brand (logo + text) – always centered */}
         <div className="flex justify-center">
           <Link to="/" className="flex items-center gap-3">
             <img
@@ -67,7 +65,6 @@ function Navbar() {
           </Link>
         </div>
 
-        {/* Right column: Request Quote (desktop) + empty placeholder (mobile) */}
         <div className="flex justify-end items-center">
           <Link to="/contact" className="btn-primary hidden lg:inline-block">
             Request Quote
@@ -88,7 +85,6 @@ function Navbar() {
               Features <i className="fas fa-chevron-down ml-1 text-sm"></i>
             </button>
 
-            {/* Panel: click-controlled on mobile, hover-controlled (grid) on desktop */}
             <div
               className={`lg:fixed lg:left-1/2 lg:-translate-x-1/2 lg:top-[104px] lg:w-[900px] lg:max-w-[95vw] bg-white text-gray-700 border border-gray-200 rounded-lg shadow-xl p-4 z-40
                 ${featuresOpen ? 'block' : 'hidden'} lg:hidden lg:group-hover:grid`}
@@ -141,9 +137,10 @@ function Navbar() {
 
           <NavLink to="/knowledge-base" className={({ isActive }) => `px-5 py-2 rounded ${isActive ? 'bg-white/20' : 'hover:bg-white/10'}`}>Knowledge Base</NavLink>
           <NavLink to="/media" className={({ isActive }) => `px-5 py-2 rounded ${isActive ? 'bg-white/20' : 'hover:bg-white/10'}`}>Media</NavLink>
-          <NavLink to="/contact" className={({ isActive }) => `px-5 py-2 rounded ${isActive ? 'bg-white/20' : 'hover:bg-white/10'}`}>Contact</NavLink>
           <NavLink to="/temple-platform-registration" className={({ isActive }) => `px-5 py-2 rounded ${isActive ? 'bg-white/20' : 'hover:bg-white/10'}`}>Temple Platform Registration</NavLink>
           <NavLink to="/temple-enquiry" className={({ isActive }) => `px-5 py-2 rounded ${isActive ? 'bg-white/20' : 'hover:bg-white/10'}`}>Temple Enquiry</NavLink>
+          {/* Contact moved to last position */}
+          <NavLink to="/contact" className={({ isActive }) => `px-5 py-2 rounded ${isActive ? 'bg-white/20' : 'hover:bg-white/10'}`}>Contact</NavLink>
 
           <Link to="/contact" className="lg:hidden px-5 py-2 rounded bg-white/20 hover:bg-white/30">Request Quote</Link>
         </div>
