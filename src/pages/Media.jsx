@@ -225,7 +225,7 @@ const mediaData = [
   {
     id: 20,
     title: 'Kumbh Mela Festival',
-    description: 'Experience the world\'s largest religious gathering at the Kumbh Mela festival.',
+    description: "Experience the world's largest religious gathering at the Kumbh Mela festival.",
     category: 'festivals',
     tag: 'Festivals',
     videoId: 'BXWrL86phYc',
@@ -266,7 +266,7 @@ const mediaData = [
   {
     id: 24,
     title: 'Siddhivinayak Temple Darshan',
-    description: 'Experience the divine Darshan at Siddhivinayak Temple in Mumbai, one of India\'s most visited temples.',
+    description: "Experience the divine Darshan at Siddhivinayak Temple in Mumbai, one of India's most visited temples.",
     category: 'darshan',
     tag: 'Darshan',
     videoId: 'IBs-ggrlwZc',
@@ -444,22 +444,22 @@ function Media() {
       <main className="pt-20">
 
         {/* ============================================================
-            HERO SECTION WITH BACKGROUND VIDEO — MOVED FURTHER DOWN
+            HERO SECTION WITH BACKGROUND VIDEO
             ============================================================ */}
-        <section className="relative py-20 md:py-28 text-white border-b-4 border-orange-500 overflow-hidden min-h-[50vh] flex items-center">
-          
-          {/* Background Video — Moved further down with top-20 */}
+        <section className="relative py-20 md:py-28 text-white border-b-4 border-orange-500 overflow-hidden min-h-[60vh] md:min-h-[70vh] flex items-center">
+
+          {/* Background Video — fills the section, keeps the top of the footage (people) in frame */}
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="absolute inset-0 w-full h-full object-cover top-20"
+            className="absolute inset-0 w-full h-full object-cover object-top"
           >
             <source src="/videos/temple-hero-bg.mp4" type="video/mp4" />
             {/* Add more formats for compatibility if needed */}
           </video>
-          
+
           {/* Dark Overlay for text readability */}
           <div className="absolute inset-0 bg-black/60"></div>
 
